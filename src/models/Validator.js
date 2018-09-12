@@ -17,8 +17,8 @@ class Validator {
         let rowStart = row - (row % this.BOX_SIZE);
         let colStart = col - (col % this.BOX_SIZE);
         let boxElements = [];
-        for (let colIndex = 0; colIndex < this.BOX_SIZE; colIndex++) {
-            boxElements = boxElements.concat(board[colStart + colIndex].slice(rowStart, rowStart+this.BOX_SIZE));
+        for (let rowIndex = 0; rowIndex < this.BOX_SIZE; rowIndex++) {
+            boxElements = boxElements.concat(board[rowStart + rowIndex].slice(colStart, colStart+this.BOX_SIZE));
         }
         return !boxElements.includes(number)
     }
