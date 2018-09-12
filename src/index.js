@@ -1,4 +1,4 @@
-const generator = require("./Generator") ;
+const generator = require("./models/Generator") ;
 
 const sudokuGenerator = new generator(24,9);
 const noOfRowsAndCols = 9;
