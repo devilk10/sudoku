@@ -1,6 +1,7 @@
-const generator = require("./models/Generator") ;
+const Generator = require("./models/Generator") ;
+const Solver = require("./models/Solver") ;
 
-const sudokuGenerator = new generator(24,9);
+const sudokuGenerator = new Generator(24,9);
 const noOfRowsAndCols = 9;
 let generatedBoard = sudokuGenerator.generate(noOfRowsAndCols);
 let solved = new Solver(generatedBoard).solve();
